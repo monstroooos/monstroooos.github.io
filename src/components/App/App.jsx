@@ -89,19 +89,23 @@ export const App = () => {
           ])
         }
 
+        const head = heads_m[indexes[0]]
+        const body = bodies_m[indexes[1]]
+        const legs = legs_m[indexes[2]]
+
         return <div className='App'>
           <div
             className='Monster'
             onClick={shuffle}>
-            <div>
-              <img src={heads_m[indexes[0]].image.publicUrl} />
-            </div>
-            <div>
-              <img src={bodies_m[indexes[1]].image.publicUrl} />
-            </div>
-            <div>
-              <img src={legs_m[indexes[2]].image.publicUrl} />
-            </div>
+            {head && <div>
+              <img src={head.image.publicUrl} />
+            </div>}
+            {body && <div>
+              <img src={body.image.publicUrl} />
+            </div>}
+            {legs && <div>
+              <img src={legs.image.publicUrl} />
+            </div>}
           </div>
 
           <button onClick={shuffle}>Embaralhar!</button>
