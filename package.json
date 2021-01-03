@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "gh-pages": "gh-pages --dist ./build --branch master"
+    "gh-pages": "gh-pages --dist ./build --branch master",
+    "deploy": "npm run build && npm run gh-pages"
   },
   "eslintConfig": {
     "extends": "react-app"
